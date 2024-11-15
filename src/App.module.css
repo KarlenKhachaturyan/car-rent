@@ -1,22 +1,31 @@
-.d-flex-center {
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255);
+  padding: 40px 32px 40px 60px;
+
+  @media (max-width: 1080px) {
+    & {
+      padding: 32px 24px;
+      align-items: flex-start;
+    }
+  }
+}
+
+.iconSearch {
+  background: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(255, 255, 255);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     & {
+      flex-direction: column;
+      align-items: baseline;
       gap: 32px;
-    }
-  }
-}
-
-.navigation {
-  padding: 40px 32px 40px 60px;
-
-  @media (max-width: 768px) {
-    & {
-      padding: 32px 24px;
+      width: 100%;
     }
   }
 }
@@ -24,7 +33,7 @@
 .mainIcon {
   margin-right: 78px;
   background: inherit;
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     & {
       margin-right: 10px;
     }
@@ -36,8 +45,16 @@
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 30.75rem;
-  width: 100%;
+  max-width: 492px;
+  width: 492px;
+
+  @media (max-width: 1080px) {
+    & {
+      width: 263px;
+      height: 48px;
+    }
+  }
+
   & .icon_img {
     background: inherit;
     top: auto;
@@ -68,7 +85,7 @@
     letter-spacing: -2%;
     text-align: justify;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       & {
         width: 263px;
         height: 48px;
@@ -94,10 +111,33 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 
-    @media (max-width: 768px) {
+    /*  Notification indicator */
+    /* &:nth-child(2)::before {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      right: 0;
+      top: 0;
+      border-radius: 50%;
+      background: rgb(255, 68, 35);
+      z-index: 111111;
+    } */
+
+    @media (max-width: 1080px) {
       &:not(:last-of-type) {
         display: none;
+      }
+
+      &:last-of-type {
+        width: 28px;
+        height: 28px;
+        & img {
+          width: 28px !important;
+          height: 28px !important;
+        }
       }
     }
   }

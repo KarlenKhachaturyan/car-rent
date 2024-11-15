@@ -9,8 +9,8 @@ import ProfileImage from "./assets/proifle-image.png";
 
 function App() {
   return (
-    <main className={[classes.navigation, classes["d-flex-center"]].join(" ")}>
-      <div className={classes["d-flex-center"]}>
+    <main className={classes.navigation}>
+      <div className={classes.iconSearch}>
         <img
           className={classes.mainIcon}
           src={Logo}
@@ -66,7 +66,7 @@ function App() {
           <img width="24" height="24" src={SettingsImage} alt="Settings" />
         </div>
         <div className={classes.profIcon}>
-          <img width="44" height="44" src={ProfileImage} alt="ProfileImage" />
+          <img src={ProfileImage} alt="ProfileImage" />
         </div>
       </div>
     </main>
