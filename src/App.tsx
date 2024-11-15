@@ -1,35 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import classes from "./App.module.css";
+import Logo from "./assets/Logo.png";
+import SearchImage from "./assets/search.png";
+import FilterImage from "./assets/filter.png";
+import HeartImage from "./assets/heart.png";
+import NotificationImage from "./assets/notification.png";
+import SettingsImage from "./assets/settings.png";
+import ProfileImage from "./assets/proifle-image.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className={[classes.navigation, classes["d-flex-center"]].join(" ")}>
+      <div className={classes["d-flex-center"]}>
+        <img
+          className={classes.mainIcon}
+          src={Logo}
+          alt="Morent"
+          width={"131"}
+          height={"25"}
+          loading="eager"
+        />
+        <div className={classes.searchWrappper}>
+          <img
+            className={classes["icon_img"]}
+            src={SearchImage}
+            width={24}
+            height={24}
+            alt="Search here"
+            loading="lazy"
+          />
+          <input
+            type="text"
+            className={classes.searchInput}
+            placeholder=" Search here..."
+          />
+          <img
+            className={classes["icon_img"]}
+            src={FilterImage}
+            width={24}
+            height={24}
+            alt="Search here"
+            loading="lazy"
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <div className={classes.profIconWrapper}>
+        <div className={classes.profIcon}>
+          <img
+            width="24"
+            height="24"
+            src={HeartImage}
+            alt="Favorites"
+            loading="lazy"
+          />
+        </div>
+        <div className={classes.profIcon}>
+          <img
+            width="24"
+            height="24"
+            src={NotificationImage}
+            alt="Notifications"
+          />
+        </div>
+        <div className={classes.profIcon}>
+          <img width="24" height="24" src={SettingsImage} alt="Settings" />
+        </div>
+        <div className={classes.profIcon}>
+          <img width="44" height="44" src={ProfileImage} alt="ProfileImage" />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
