@@ -1,0 +1,22 @@
+.main {
+  padding: 32px 64px;
+  background: rgb(246, 247, 249);
+  @media (max-width: 1080px) {
+    & {
+      flex-direction: column;
+      padding: 24px;
+    }
+  }
+}
+
+.ads-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  @media (max-width: 1080px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}

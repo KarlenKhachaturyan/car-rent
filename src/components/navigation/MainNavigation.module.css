@@ -14,10 +14,10 @@
 }
 
 .iconSearch {
+  flex: 1;
   background: inherit;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: rgba(255, 255, 255);
 
   @media (max-width: 1080px) {
@@ -40,61 +40,6 @@
   }
 }
 
-.searchWrappper {
-  background: inherit;
-  position: relative;
-  display: flex;
-  align-items: center;
-  max-width: 492px;
-  width: 492px;
-
-  @media (max-width: 1080px) {
-    & {
-      width: 263px;
-      height: 48px;
-    }
-  }
-
-  & .icon_img {
-    background: inherit;
-    top: auto;
-
-    &:first-of-type {
-      position: absolute;
-      left: 20px;
-    }
-
-    &:last-of-type {
-      position: absolute;
-      right: 20px;
-    }
-  }
-
-  & .searchInput {
-    width: 100%;
-    height: 44px;
-    border: 1px solid rgba(195, 212, 233, 0.4);
-    border-radius: 70px;
-    background: rgb(255, 255, 255);
-    padding: 10px 20px 10px 64px;
-    color: rgb(89, 103, 128);
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: -2%;
-    text-align: justify;
-
-    @media (max-width: 1080px) {
-      & {
-        width: 263px;
-        height: 48px;
-        border-radius: 10px;
-      }
-    }
-  }
-}
-
 .profIconWrapper {
   display: flex;
   align-items: center;
@@ -112,7 +57,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
-
+    cursor: pointer;
     &:last-of-type {
       width: 44px;
       height: 44px;
@@ -140,7 +85,7 @@
         display: none;
       }
 
-      &:last-of-type {
+      & {
         width: 28px;
         height: 28px;
         & img {

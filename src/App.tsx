@@ -1,11 +1,8 @@
-import Nav from "./components/navigation/Nav.tsx";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
 
 const App: React.FC = () => {
-  return (
-    <>
-      <Nav />
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

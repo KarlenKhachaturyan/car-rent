@@ -1,7 +1,7 @@
 import SearchImage from "../../assets/search.png";
 import FilterImage from "../../assets/filter.png";
 import classes from "./SearchNavigation.module.css";
-const SearchNavigation: React.FC = () => {
+const SearchNavigation: React.FC<{ loading: boolean }> = ({ loading }) => {
   return (
     <div className={classes.searchWrappper}>
       <img
@@ -13,6 +13,7 @@ const SearchNavigation: React.FC = () => {
         loading="lazy"
       />
       <input
+        disabled={loading}
         type="text"
         className={classes.searchInput}
         placeholder=" Search here..."

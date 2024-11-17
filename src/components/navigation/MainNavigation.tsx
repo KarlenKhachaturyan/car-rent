@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import SearchNavigation from "./SearchNavigation";
-import classes from "./Nav.module.css";
+import classes from "./MainNavigation.module.css";
 import Logo from "../../assets/Logo.png";
 import HeartImage from "../../assets/heart.png";
 import NotificationImage from "../../assets/notification.png";
 import SettingsImage from "../../assets/settings.png";
 import ProfileImage from "../../assets/profile.png";
 import ProfIconFallback from "../loadings/ProfIcon";
+import useWindow from "../../helpers/useWindow";
 
-const Nav: React.FC = () => {
+const MainNavigation: React.FC = () => {
   const [loading, setLoading] = useState(true);
+  const windowSize = useWindow();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
@@ -23,6 +25,7 @@ const Nav: React.FC = () => {
 
   return (
     <main className={classes.navigation}>
+      <meta name="keywords" content="React" />
       <div className={classes.iconSearch}>
         <img
           className={classes.mainIcon}
@@ -32,12 +35,11 @@ const Nav: React.FC = () => {
           height={"25"}
           loading="eager"
         />
-
-        <SearchNavigation />
+        <SearchNavigation loading={loading} />
       </div>
 
       <div className={classes.profIconWrapper}>
-        {loading ? (
+        {loading && windowSize.width > 1080 ? (
           <ProfIconFallback />
         ) : (
           <div className={classes.profIcon}>
@@ -51,7 +53,7 @@ const Nav: React.FC = () => {
           </div>
         )}
 
-        {loading ? (
+        {loading && windowSize.width > 1080 ? (
           <ProfIconFallback />
         ) : (
           <div className={classes.profIcon}>
@@ -63,19 +65,23 @@ const Nav: React.FC = () => {
             />
           </div>
         )}
-        {loading ? (
+        {loading && windowSize.width > 1080 ? (
           <ProfIconFallback />
         ) : (
           <div className={classes.profIcon}>
             <img width="24" height="24" src={SettingsImage} alt="Settings" />
           </div>
         )}
-        <div className={classes.profIcon}>
-          <img src={ProfileImage} alt="ProfileImage" />
-        </div>
+        {loading ? (
+          <ProfIconFallback />
+        ) : (
+          <div className={classes.profIcon}>
+            <img src={ProfileImage} alt="ProfileImage" />
+          </div>
+        )}
       </div>
     </main>
   );
 };
 
-export default Nav;
+export default MainNavigation;
