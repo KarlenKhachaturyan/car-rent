@@ -73,6 +73,13 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className={classes.copyright}>
+        <div>©2022 MORENT. All rights reserved</div>
+        <div className={classes.privacyLinks}>
+          <Link to="/privacy"> Privacy & Policy</Link>
+          <Link to="/terms"> Terms & Conditions</Link>
+        </div>
+      </div>
     </footer>
   );
 };

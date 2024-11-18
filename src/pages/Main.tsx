@@ -3,6 +3,7 @@ import classes from "./MainPage.module.css";
 import Car1 from "../assets/car1.png";
 import Car2 from "../assets/car2.png";
 import { useState, useEffect } from "react";
+import Card from "../components/card/Card.tsx";
 
 import AdsLoading from "../components/loadings/AdsLoading.tsx";
 
@@ -12,7 +13,7 @@ const MainPage: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
@@ -20,9 +21,6 @@ const MainPage: React.FC = () => {
   }, []);
   return (
     <>
-      <meta name="keywords" content="React" />
-      <meta name="description" content="A site map for the React website" />
-
       <section className={classes.main}>
         <div className={classes["ads-wrap"]}>
           {loading ? (
@@ -36,6 +34,9 @@ const MainPage: React.FC = () => {
             <Ads bgImage="odd" image={Car2} imgHeight="108" />
           )}
         </div>
+      </section>
+      <section className={classes["mb-42"]}>
+        <Card />
       </section>
     </>
   );

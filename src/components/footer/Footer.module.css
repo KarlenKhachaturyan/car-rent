@@ -1,8 +1,16 @@
+footer {
+  padding: 80px 60px 60px 60px;
+
+  @media (max-width: 1080px) {
+    & {
+      padding: 48px 24px 24px 24px;
+    }
+  }
+}
+
 .footerWrapper {
   display: flex;
   justify-content: space-between;
-  padding: 80px 60px 60px 60px;
-
   & .mainIcon {
     margin-right: 78px;
     background: inherit;
@@ -23,12 +31,6 @@
     line-height: 150%;
     letter-spacing: -2%;
     text-align: left;
-  }
-
-  @media (max-width: 1080px) {
-    & {
-      padding: 48px 24px 24px 24px;
-    }
   }
 
   @media (max-width: 886px) {
@@ -85,6 +87,48 @@
         letter-spacing: -2%;
         text-align: left;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+.copyright {
+  border-top: 1px solid rgba(19, 19, 19, 0.16);
+  display: flex;
+  padding-top: 35px;
+  justify-content: space-between;
+  color: rgb(26, 32, 44);
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: left;
+
+  @media (max-width: 680px) {
+    & {
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
+  }
+  & a {
+    text-decoration: none;
+    color: rgb(26, 32, 44);
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -2%;
+    text-align: left;
+  }
+
+  & .privacyLinks {
+    display: flex;
+    gap: 60px;
+
+    @media (max-width: 680px) {
+      & {
+        justify-content: space-between;
       }
     }
   }
