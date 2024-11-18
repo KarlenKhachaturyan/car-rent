@@ -1,0 +1,98 @@
+.card {
+  width: 304px;
+  height: 388px;
+  padding: 24px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 32px;
+  position: relative;
+
+  /* @media (max-width: 900px) {
+    & {
+      flex: 1;
+      max-width: unset;
+    }
+  } */
+
+  & h6 {
+    width: 100%;
+    color: rgb(26, 32, 44);
+  }
+
+  & .type {
+    margin: 0;
+    padding: 0;
+    color: rgb(144, 163, 191);
+    margin-top: 6px;
+    width: 100px;
+  }
+
+  & .main_image {
+    width: 100%;
+    margin: 50px 0;
+
+    &::after {
+      height: 100px;
+    }
+  }
+
+  & .info {
+    width: 100%;
+
+    &::after {
+      height: 20px;
+    }
+  }
+
+  & .priceWrapper {
+    margin-top: 24px;
+
+    &::after {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+.ad {
+  width: 640px;
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card > * {
+  overflow: hidden;
+  -webkit-box-shadow: -5px 5px 14px -4px rgba(176, 176, 176, 1);
+  -moz-box-shadow: -5px 5px 14px -4px rgba(176, 176, 176, 1);
+  box-shadow: -5px 5px 14px -4px rgba(176, 176, 176, 1);
+  border-radius: 10px;
+}
+
+.card > *::after,
+.info > *::after {
+  content: "";
+  display: block;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05); /* Example background */
+  height: 20px; /* Example height */
+  top: 0;
+  left: -50%;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 237, 237, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(192, 191, 191, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite; /* Speed up animation for better visibility */
+  content: "";
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(120%);
+  }
+}

@@ -8,6 +8,13 @@
   margin-bottom: 32px;
   position: relative;
 
+  /* @media (max-width: 900px) {
+    & {
+      flex: 1;
+      max-width: unset;
+    }
+  } */
+
   & h6 {
     color: rgb(26, 32, 44);
     font-family: Plus Jakarta Sans;
