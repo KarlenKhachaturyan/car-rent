@@ -3,12 +3,87 @@
   height: 360px;
   border-radius: 10px;
   position: relative;
+  padding: 24px;
+
+  @media (max-width: 1080px) {
+    & {
+      padding: 16px;
+    }
+  }
+
+  & .title {
+    width: 284px;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: Plus Jakarta Sans;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -3%;
+    text-align: left;
+    margin-bottom: 16px;
+
+    @media (max-width: 1080px) {
+      & {
+        width: 240px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  & .description {
+    width: 284px;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -2%;
+    text-align: left;
+    margin-bottom: 20px;
+
+    @media (max-width: 1080px) {
+      & {
+        width: 240px;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  & .rent_btn {
+    width: 116px;
+    height: 44px;
+    border: none;
+    border-radius: 4px;
+    padding: 0px 20px 0px 20px;
+    background: rgb(53, 99, 233);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Plus Jakarta Sans;
+    font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -2%;
+    text-align: center;
+
+    @media (max-width: 1080px) {
+      & {
+        width: 128px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+      }
+    }
+  }
 
   & img {
     position: absolute;
-    inset: 0;
     left: 50%;
-    top: 80%;
+    bottom: -20%;
     transform: translateX(-50%) translateY(-80%);
 
     @media (max-width: 1080px) {
@@ -18,6 +93,10 @@
     }
 
     @media (max-width: 640px) {
+      & {
+        bottom: -17%;
+      }
+
       &:first-of-type {
         width: 196px;
         height: 56px;

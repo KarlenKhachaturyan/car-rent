@@ -6,4 +6,113 @@
   border-radius: 10px;
   background: rgb(255, 255, 255);
   margin-bottom: 32px;
+  position: relative;
+
+  & h6 {
+    color: rgb(26, 32, 44);
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  & .type {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: rgb(144, 163, 191);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-top: 6px;
+    text-align: left;
+  }
+
+  & .heart {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 20px;
+    height: 17.8px;
+  }
+
+  & .main_image {
+    object-fit: contain;
+    height: 100px;
+    width: 100%;
+    mix-blend-mode: darken;
+    margin: 50px 0;
+    &::after {
+      content: "";
+      height: 68px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgb(255, 255, 255) 100%
+      );
+    }
+  }
+
+  & .info {
+    display: flex;
+    justify-content: space-between;
+
+    & p {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgb(144, 163, 191);
+      font-family: Plus Jakarta Sans;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+
+    & img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  & .price {
+    color: rgb(26, 32, 44);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  & .priceWrapper {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & button {
+      width: 116px;
+      height: 44px;
+      border: none;
+      border-radius: 4px;
+      padding: 0px 20px 0px 20px;
+      background: rgb(53, 99, 233);
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-family: Plus Jakarta Sans;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -2%;
+      text-align: center;
+    }
+  }
 }

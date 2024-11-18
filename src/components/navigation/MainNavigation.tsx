@@ -16,7 +16,7 @@ const MainNavigation: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
