@@ -6,6 +6,7 @@ import Favorite_empty from "../../assets/favorite_empty.png";
 import Gasoline from "../../assets/gasoline.png";
 import Gear from "../../assets/gear.png";
 import Passengers from "../../assets/passengers.png";
+import { Link } from "react-router-dom";
 
 const Card: React.FC<{ car: Car }> = ({ car }) => {
   return (
@@ -38,7 +39,9 @@ const Card: React.FC<{ car: Car }> = ({ car }) => {
       </div>
       <div className={classes.priceWrapper}>
         <p className={classes.price}>{priceConverter.format(car.price)}</p>
-        <button className={classes.rentBtn}>Rent Now</button>
+        <Link to={`/info/${car.id}`} className={classes.rentBtn}>
+          Rent Now
+        </Link>
       </div>
     </div>
   );
